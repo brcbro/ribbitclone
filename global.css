@@ -476,13 +476,13 @@ button:focus {
 }
 
 .icon-btn.meeting .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/meeting.svg");
+    background-image: url("/proxy/grx/meeting.svg");
     width: 18px;
     left: 14px;
 }
 
 .icon-btn.next .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/arrow_r_dark.svg");
+    background-image: url("/proxy/grx/arrow_r_dark.svg");
     width: 17px;
     left: auto;
     right: 15px;
@@ -490,7 +490,7 @@ button:focus {
 }
 
 .icon-btn.next.purple .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/arrow_r.svg");
+    background-image: url("/proxy/grx/arrow_r.svg");
     width: 17px;
     left: auto;
     right: 15px;
@@ -498,11 +498,11 @@ button:focus {
 }
 
 a.icon-btn[href^="mailto:"] .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/mailbox.svg");
+    background-image: url("/proxy/grx/mailbox.svg");
 }
 
 a.icon-btn[href^="tel:"] .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/phone.svg");
+    background-image: url("/proxy/grx/phone.svg");
 }
 
 /* With icons left and right */
@@ -573,19 +573,19 @@ a.icon-btn[href^="tel:"] .icon {
 }
 
 .icons-btn.eyes .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/eye_white.svg");
+    background-image: url("/proxy/grx/eye_white.svg");
 }
 
 .icons-btn.eyes .iconr {
-    background-image: url("https://ribbit.dk/Assets/Grx/eye_white.svg");
+    background-image: url("/proxy/grx/eye_white.svg");
 }
 
 .icons-btn.eyes.dark .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/eye_dark.svg");
+    background-image: url("/proxy/grx/eye_dark.svg");
 }
 
 .icons-btn.eyes.dark .iconr {
-    background-image: url("https://ribbit.dk/Assets/Grx/eye_dark.svg");
+    background-image: url("/proxy/grx/eye_dark.svg");
 }
 
 .simple-icon-btn {
@@ -677,54 +677,54 @@ a.icon-btn[href^="tel:"] .icon {
 }
 
 a.simple-icon-btn[href^="mailto:"] .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/mailbox.svg");
+    background-image: url("/proxy/grx/mailbox.svg");
 }
 
 a.simple-icon-btn[href^="mailto:"] .iconr {
-    background-image: url("https://ribbit.dk/Assets/Grx/mailbox2.svg");
+    background-image: url("/proxy/grx/mailbox2.svg");
 }
 
 a.simple-icon-btn.dark[href^="mailto:"] .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/mailbox_dark.svg");
+    background-image: url("/proxy/grx/mailbox_dark.svg");
 }
 
 a.simple-icon-btn.dark[href^="mailto:"] .iconr {
-    background-image: url("https://ribbit.dk/Assets/Grx/mailbox2_dark.svg");
+    background-image: url("/proxy/grx/mailbox2_dark.svg");
 }
 
 a.simple-icon-btn[href^="tel:"] .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/phone.svg");
+    background-image: url("/proxy/grx/phone.svg");
 }
 
 a.simple-icon-btn[href^="tel:"] .iconr {
-    background-image: url("https://ribbit.dk/Assets/Grx/phone2.svg");
+    background-image: url("/proxy/grx/phone2.svg");
 }
 
 a.simple-icon-btn.dark[href^="tel:"] .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/phone_dark.svg");
+    background-image: url("/proxy/grx/phone_dark.svg");
 }
 
 a.simple-icon-btn.dark[href^="tel:"] .iconr {
-    background-image: url("https://ribbit.dk/Assets/Grx/phone2_dark.svg");
+    background-image: url("/proxy/grx/phone2_dark.svg");
 }
 
 a.simple-icon-btn.map .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/map.svg");
+    background-image: url("/proxy/grx/map.svg");
 }
 
 a.simple-icon-btn.map .iconr {
     right: 4px;
     top: 1px;
-    background-image: url("https://ribbit.dk/Assets/Grx/map2.svg");
+    background-image: url("/proxy/grx/map2.svg");
 }
 
 a.simple-icon-btn.map.dark .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/map_dark.svg");
+    background-image: url("/proxy/grx/map_dark.svg");
 }
 
 a.simple-icon-btn.map.dark .iconr {
     right: 4px;
-    background-image: url("https://ribbit.dk/Assets/Grx/map2_dark.svg");
+    background-image: url("/proxy/grx/map2_dark.svg");
 }
 
 a.simple-icon-btn.map .label {
@@ -762,7 +762,7 @@ a.simple-icon-btn.map .label {
     top: 0;
     display: inline-block;
     vertical-align: top;
-    background: url("https://ribbit.dk/Assets/Grx/arrow_tr.svg") no-repeat;
+    background: url("/proxy/grx/arrow_tr.svg") no-repeat;
     width: 10px;
     height: 11px;
     opacity: 0;
@@ -821,7 +821,7 @@ a.simple-icon-btn.map .label {
     height: 17px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("https://ribbit.dk/Assets/Grx/arrow_r.svg");
+    background-image: url("/proxy/grx/arrow_r.svg");
 }
 
 .browse-btn.left .icon {
@@ -831,27 +831,27 @@ a.simple-icon-btn.map .label {
 .browse-btn.close .icon {
     width: 16px;
     height: 16px;
-    background-image: url("https://ribbit.dk/Assets/Grx/close.svg");
+    background-image: url("/proxy/grx/close.svg");
     margin-left: 1px;
 }
 
 .browse-btn.fs .icon {
     width: 26px;
     height: 19px;
-    background-image: url("https://ribbit.dk/Assets/Grx/fs.svg");
+    background-image: url("/proxy/grx/fs.svg");
     margin-left: 1px;
 }
 
 .browse-btn.playpause .icon {
     width: 19px;
     height: 16px;
-    background-image: url("https://ribbit.dk/Assets/Grx/pause.svg");
+    background-image: url("/proxy/grx/pause.svg");
 }
 
 .browse-btn.playpause.paused .icon {
     width: 14px;
     height: 16px;
-    background-image: url("https://ribbit.dk/Assets/Grx/play.svg");
+    background-image: url("/proxy/grx/play.svg");
     margin-left: 3px;
 }
 
@@ -859,7 +859,7 @@ a.simple-icon-btn.map .label {
     position: relative;
     width: 19px;
     height: 18px;
-    background-image: url("https://ribbit.dk/Assets/Grx/mute.svg");
+    background-image: url("/proxy/grx/mute.svg");
     margin-left: -1px;
 }
 
@@ -870,7 +870,7 @@ a.simple-icon-btn.map .label {
     top: -1px;
     width: 20px;
     height: 24px;
-    background-image: url("https://ribbit.dk/Assets/Grx/mute2.svg");
+    background-image: url("/proxy/grx/mute2.svg");
 }
 
 /*.browse-btn.mute.muted{opacity:.5;}*/
@@ -889,7 +889,7 @@ a.simple-icon-btn.map .label {
 .browse-btn.close.white .icon {
     width: 16px;
     height: 16px;
-    background-image: url("https://ribbit.dk/Assets/Grx/close_dark.svg");
+    background-image: url("/proxy/grx/close_dark.svg");
 }
 
 
@@ -949,7 +949,7 @@ a.simple-icon-btn.map .label {
     vertical-align: middle;
     width: 14px;
     height: 16px;
-    background: url("https://ribbit.dk/Assets/Grx/play.svg") no-repeat;
+    background: url("/proxy/grx/play.svg") no-repeat;
     background-size: contain;
 }
 
@@ -1660,7 +1660,7 @@ body.green-meeting:not(.footer-on) header+.logo+.meeting::before {
 }
 
 body.green-meeting:not(.footer-on) header+.logo+.meeting .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/meeting_white.svg");
+    background-image: url("/proxy/grx/meeting_white.svg");
 }
 
 body.dark-meeting:not(.footer-on) header+.logo+.meeting {
@@ -1672,7 +1672,7 @@ body.dark-meeting:not(.footer-on) header+.logo+.meeting::before {
 }
 
 body.dark-meeting:not(.footer-on) header+.logo+.meeting .icon {
-    background-image: url("https://ribbit.dk/Assets/Grx/meeting_white.svg");
+    background-image: url("/proxy/grx/meeting_white.svg");
 }
 
 body.footer-on header+.logo+.meeting,
@@ -3046,7 +3046,7 @@ main {
     top: 6px;
     width: 17px;
     height: 17px;
-    background: url("https://ribbit.dk/Assets/Grx/arrow_r_dark.svg") no-repeat;
+    background: url("/proxy/grx/arrow_r_dark.svg") no-repeat;
     margin-right: 6px;
     opacity: 0;
     transform: translateX(-23px);
@@ -3537,7 +3537,7 @@ main {
     bottom: 125px;
     width: 336px;
     height: 336px;
-    background: url("https://ribbit.dk/Assets/Grx/compass.svg") no-repeat;
+    background: url("/proxy/grx/compass.svg") no-repeat;
     cursor: pointer;
 }
 
@@ -4068,7 +4068,7 @@ main {
 .m.contact .l .b .local-time .clock {
     display: inline-block;
     vertical-align: top;
-    background: url("https://ribbit.dk/Assets/Grx/clock_dark.svg") no-repeat;
+    background: url("/proxy/grx/clock_dark.svg") no-repeat;
     width: 15px;
     height: 14px;
     margin-right: 7px;
@@ -4865,7 +4865,7 @@ footer .contact .local-time {
 footer .contact .clock {
     display: inline-block;
     vertical-align: top;
-    background: url("https://ribbit.dk/Assets/Grx/clock.svg") no-repeat;
+    background: url("/proxy/grx/clock.svg") no-repeat;
     width: 15px;
     height: 14px;
     margin-right: 7px;

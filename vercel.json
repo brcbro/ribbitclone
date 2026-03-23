@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/proxy/grx/:path*",
+      "destination": "https://ribbit.dk/Assets/Grx/:path*"
+    }
+  ]
+}

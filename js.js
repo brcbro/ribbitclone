@@ -39811,10 +39811,14 @@ function PNGSequence(b, h) {
         transformOrigin: fa[2] + "% " + fa[3] + "%"
     });
     var ta = "true" == b.getAttribute("data-mobileoptimize")
+        , ea = b.getAttribute("data-prefix") || ""
+        , ma = parseInt(b.getAttribute("data-start") || "0", 10)
+        , na = parseInt(b.getAttribute("data-pad") || "3", 10)
+        , oa = b.getAttribute("data-extension") || ".png"
         , X = document.createDocumentFragment()
         , la = [];
     for (fa = 0; fa < G; fa++)
-        la.push(new PNGSImg(fa, R, X, b, U, ta));
+        la.push(new PNGSImg(fa, R, X, b, U, ta, ea, ma, na, oa));
     b.appendChild(X);
     la[0].load();
     x.progress = function (b) {
@@ -39950,37 +39954,42 @@ function PNGSequence(b, h) {
         X = null
     }
 }
-function PNGSImg(b, h, g, k, m, w) {
-    function q(b) {
-        z._loaded = !0
+function PNGSImg(b, h, g, k, m, w, q, z, u, x) {
+    function B(b) {
+        D._loaded = !0
     }
-    var z = this;
-    z._loaded = !1;
-    var u = GLB._isMobile
-        , x = document.createElement("img");
-    x.className = 0 == b ? "img" : "img hide";
-    x.width = m[0];
-    x.height = m[1];
-    x.setAttribute("alt", "");
-    GLBEvents(x, "load", q, !0);
-    g.appendChild(x);
-    z.load = function () {
-        u && w && 1 == b % 2 ? z._loaded = !0 : (10 > b ? h += "00" : 100 > b && (h += "0"),
-            x.src = h + b + ".png")
-    }
-        ;
-    z.hide = function () {
-        x.classList.add("hide")
-    }
-        ;
-    z.show = function () {
-        x.classList.remove("hide")
+    var D = this;
+    D._loaded = !1;
+    var F = GLB._isMobile
+        , N = document.createElement("img");
+    N.className = 0 == b ? "img" : "img hide";
+    N.width = m[0];
+    N.height = m[1];
+    N.setAttribute("alt", "");
+    GLBEvents(N, "load", B, !0);
+    g.appendChild(N);
+    D.load = function () {
+        if (F && w && 1 == b % 2)
+            D._loaded = !0;
+        else {
+            for (var I = "" + (b + z), R = ""; R.length + I.length < u;)
+                R += "0";
+            N.src = h + q + R + I + x
+        }
     }
         ;
-    z.destroy = function () {
-        GLBEvents(x, "load", q, !1);
-        k.removeChild(x);
-        x = null
+    D.hide = function () {
+        N.classList.add("hide")
+    }
+        ;
+    D.show = function () {
+        N.classList.remove("hide")
+    }
+        ;
+    D.destroy = function () {
+        GLBEvents(N, "load", B, !1);
+        k.removeChild(N);
+        N = null
     }
 }
 function ProcessBook(b) {

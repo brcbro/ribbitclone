@@ -38663,6 +38663,26 @@ function Showreel(b) {
         Q = D.offsetHeight;
         qa = .49 * GLB._vw
     }
+    function Ea() {
+        clearTimeout(ca);
+        clearTimeout(da)
+    }
+    function Fa() {
+        Ea();
+        ba && P && T && (ca = setTimeout(Ga, 2500 + 2E3 * Math.random()))
+    }
+    function Ga() {
+        2 == ja && P && T && (P.off(),
+            T.load(),
+            T.on(),
+            T.playThrough(ia),
+            da = setTimeout(Ha, 1E3 * ia))
+    }
+    function Ha() {
+        2 == ja && P && (T && T.off(),
+            P.on(),
+            Fa())
+    }
     function g(b) {
         V = I ? 0 : _smoothScroller._wsdelta;
         gsap.ticker.deltaRatio(60);
@@ -38672,7 +38692,41 @@ function Showreel(b) {
         H < K && (H = K);
         ha = 1 - (H - K) / (1 - K);
         N.progress(ha);
-        if (0 <= V) {
+        if (ba && P) {
+            if (!I && .98 <= ha && 0 <= V) {
+                if (2 != ja) {
+                    ja = 2;
+                    Ea();
+                    N && N.off();
+                    O && (O.progress(0),
+                        O.off());
+                    T && T.off();
+                    P.load();
+                    P.on();
+                    Fa()
+                }
+            } else if (0 < V) {
+                if (0 != ja) {
+                    ja = 0;
+                    Ea();
+                    N && N.on();
+                    O && (O.progress(0),
+                        O.off());
+                    P.off();
+                    T && T.off()
+                }
+            } else if ((0 > V || 1 == ja) && .98 > ha && O) {
+                1 != ja && (ja = 1,
+                    Ea(),
+                    P.off(),
+                    T && T.off(),
+                    N && N.off(),
+                    O.load(),
+                    O.on());
+                O.progress(1 - ha)
+            } else if (N)
+                N.on()
+        } else if (0 <= V) {
             if (0 != ja) {
                 ja = 0;
                 if (N)
@@ -38728,7 +38782,10 @@ function Showreel(b) {
     }
     function m() {
         I = !1;
-        O && O.load()
+        O && O.load();
+        P && P.load();
+        T && T.load();
+        g(null)
     }
     function w() {
         N && N.load()
@@ -38739,12 +38796,21 @@ function Showreel(b) {
         , u = z.getElementsByClassName("play-btn")[0]
         , x = new FSVideoplayer(u, z, !1)
         , D = b.getElementsByClassName("figure")[0]
+        , Y = D.getElementsByClassName("animations")[0]
+        , ba = "skeleton-sage" == (Y.getAttribute("data-animation-set") || "")
         , F = b.getElementsByClassName("png-sequence")
         , N = new PNGSequence(F[0], "push");
     N.on();
     var O = new PNGSequence(F[1], "pull");
     O.off();
-    var B = b.parentNode.getElementsByClassName("showreelspace")[0], I = !1, R = 0, G = 0, H = 1, S = 1, K = .5, Q = 0, J = 0, U = 0, fa = 16, ta = 16, X = 0, la = 0, V = 0, ja = 0, qa = 1E3, ra, ya = 0, ha = 0;
+    var P = ba && F[2] ? new PNGSequence(F[2], "idle") : null;
+    P && P.off();
+    var T = ba && F[3] ? new PNGSequence(F[3], "pull") : null;
+    T && T.off();
+    var ia = ba && F[3] ? parseFloat(F[3].getAttribute("data-playthrough") || "2.6") : 0
+        , ca = 0
+        , da = 0
+        , B = b.parentNode.getElementsByClassName("showreelspace")[0], I = !1, R = 0, G = 0, H = 1, S = 1, K = .5, Q = 0, J = 0, U = 0, fa = 16, ta = 16, X = 0, la = 0, V = 0, ja = 0, qa = 1E3, ra, ya = 0, ha = 0;
     GLBEvents(window, "resize", h, !0);
     h(null);
     _viewportObserverQuart.observe(B, function () {
@@ -38764,6 +38830,7 @@ function Showreel(b) {
     } else
         k();
     q.destroy = function () {
+        Ea();
         clearTimeout(pa);
         gsap.killTweensOf(q);
         _viewportObserverQuart.unobserve(B);
@@ -38775,7 +38842,11 @@ function Showreel(b) {
         N.destroy();
         N = null;
         O.destroy();
-        O = null
+        O = null;
+        P && (P.destroy(),
+            P = null);
+        T && (T.destroy(),
+            T = null)
     }
 }
 function AboutText(b) {

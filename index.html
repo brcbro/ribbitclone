@@ -125,13 +125,23 @@
             <!-- Showreel and loop scaled by scroll -->
             <div class="m showreel">
                 <div class="figure">
-                    <div class="animations">
-                        <div class="png-sequence" data-type="push" data-path="assets/grx/sage_push/" data-length="174"
-                            data-speed="1" data-xadjust="2" data-yadjust="6" data-scale="1,1,0,0" data-rel="490,414"
-                            data-mobileoptimize="true"></div>
-                        <div class="png-sequence" data-type="pull" data-path="assets/grx/sage_pull/" data-length="25"
-                            data-speed="1.75" data-loop="false" data-xadjust="0" data-yadjust="-2"
-                            data-scale=".75,.75,100,50" data-rel="306,325" data-mobileoptimize="true"></div>
+                    <div class="animations" data-animation-set="skeleton-sage">
+                        <div class="png-sequence" data-type="push" data-path="assets/skeleton/Push/"
+                            data-prefix="skeletonPush" data-length="121" data-speed="1" data-xadjust="22"
+                            data-yadjust="6" data-scale=".87,.87,50,100" data-rel="960,960" data-mobileoptimize="true">
+                        </div>
+                        <div class="png-sequence" data-type="grab" data-path="assets/skeleton/grab/"
+                            data-prefix="skeletonGrab" data-length="121" data-speed="1" data-loop="false"
+                            data-playthrough="1.6" data-xadjust="30" data-yadjust="15" data-scale=".87,.87,50,100"
+                            data-rel="960,960" data-mobileoptimize="true"></div>
+                        <div class="png-sequence" data-type="idle" data-path="assets/skeleton/idle/"
+                            data-prefix="SkeletonStandIdle" data-length="121" data-speed="1" data-mustpause="true"
+                            data-pause="1.2" data-xadjust="18" data-yadjust="3" data-scale=".87,.87,50,100"
+                            data-rel="960,960" data-mobileoptimize="true"></div>
+                        <div class="png-sequence" data-type="idle-greeting" data-path="assets/skeleton/idleGreatings/"
+                            data-prefix="skeletonGreating" data-length="121" data-speed="1" data-loop="false"
+                            data-playthrough="2.6" data-xadjust="17" data-yadjust="6" data-scale=".87,.87,50,100"
+                            data-rel="960,960" data-mobileoptimize="true"></div>
                     </div>
                 </div>
                 <div class="loop">
@@ -414,8 +424,8 @@
     <footer data-color="light-menu">
         <div class="logo">
             <picture>
-                <img src="assets/grx/ribbit_footer.svg" width="1601" height="500" alt="" loading="eager" decoding="async"
-                    draggable="false">
+                <img src="assets/grx/ribbit_footer.svg" width="1601" height="500" alt="" loading="eager"
+                    decoding="async" draggable="false">
             </picture>
         </div>
         <div class="contact">

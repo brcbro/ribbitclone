@@ -112,7 +112,7 @@ body:not(.animates) * {
 
     --delay: 0s;
 
-    --lightgrey: #FAFAFA;
+    --lightgrey: #000000;
     --lightpurple: #A88BFA;
     --midpurple: #5B21B6;
     --darkpurple: #23234A;
@@ -122,7 +122,7 @@ body:not(.animates) * {
     --orange: #FF9C00;
     --lightbrown: #FFE3C9;
     --darkbrown: #502B1A;
-    --darkink: #2F2F2F;
+    --darkink: #FFFFFF;
 
     --gutter: 24px;
     /*11 gutters and 2 margins*/
@@ -573,19 +573,19 @@ a.icon-btn[href^="tel:"] .icon {
 }
 
 .icons-btn.eyes .icon {
-    background-image: url("assets/grx/eye_white.svg");
+    background-image: url("assets/grx/eye_dark.svg");
 }
 
 .icons-btn.eyes .iconr {
-    background-image: url("assets/grx/eye_white.svg");
+    background-image: url("assets/grx/eye_dark.svg");
 }
 
 .icons-btn.eyes.dark .icon {
-    background-image: url("assets/grx/eye_dark.svg");
+    background-image: url("assets/grx/eye_white.svg");
 }
 
 .icons-btn.eyes.dark .iconr {
-    background-image: url("assets/grx/eye_dark.svg");
+    background-image: url("assets/grx/eye_white.svg");
 }
 
 .simple-icon-btn {
@@ -1439,12 +1439,12 @@ header .menu.collapsed .logo {
 /*hide when collapsed*/
 body.light-menu header .menu .logo .dark,
 body.light-menu header+.logo .dark {
-    opacity: 0;
+    opacity: 1;
 }
 
 body.light-menu header .menu .logo .light,
 body.light-menu header+.logo .light {
-    opacity: 1;
+    opacity: 0;
 }
 
 header .menu .eyes {
@@ -1481,7 +1481,7 @@ header .menu .eyes .eye div {
     position: relative;
     width: 26px;
     height: 24px;
-    background-color: #FFF;
+    background-color: var(--lightgrey);
     border-radius: 13px;
     transition: background-color .2s ease;
 }
@@ -1513,7 +1513,7 @@ header .menu.collapsed .eyes {
 }
 
 body.light-menu header .menu .eyes .eye div {
-    background-color: var(--darkink);
+    background-color: var(--lightgrey);
 }
 
 body.light-menu header .menu .eyes .eye div>span span {
@@ -1564,12 +1564,12 @@ header .menu.collapsed nav {
 }
 
 body.light-menu header nav {
-    color: #FFF;
+    color: var(--lightgrey);
 }
 
 body.light-menu header .menu.collapsed nav {
     background-color: #FFF;
-    color: var(--darkink);
+    color: var(--lightgrey);
 }
 
 body.light-menu header .menu nav::before,
@@ -1959,7 +1959,7 @@ main {
     top: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, #FFF 0%, #EEEEF1 100%);
+    background: linear-gradient(180deg, #000 0%, #111 100%);
     z-index: -1;
 }
 
@@ -2024,7 +2024,7 @@ main {
 }
 
 .m.cases-teaser {
-    background: var(--darkink);
+    background: #333333;
     color: #FFF;
     text-align: center;
     padding-bottom: 160px;
